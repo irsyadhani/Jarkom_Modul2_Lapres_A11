@@ -59,8 +59,7 @@ cp /etc/bind/db.local /etc/bind/jarkom/semerua11.pw
 ```
 nano /etc/bind/jarkom/semerua11.pw
 ```
-![alt text](/img/1.png)
-![alt text](/img/1.png)
+![alt text](/img/1.PNG)
 
 ● Restart bind9 dengan perintah
 ```
