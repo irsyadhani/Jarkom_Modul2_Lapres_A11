@@ -422,7 +422,7 @@ _**Penyelesaian:**_
 _**Penyelesaian:**_
 
 ● Pindah ke directory /var/www/penanjakan.semerua11.pw dan buat file .htaccess dengan isi file seperti gambar
-![alt text](/img/17.PNG)
+![alt text](/img/17.jpg)
 
 ● restart apache
 
