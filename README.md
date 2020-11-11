@@ -70,7 +70,7 @@ service bind9 restart
  ```
  nano /etc/resolv.conf
  ```
- ![alt text](/img/sidoarjo tes.PNG)
+ ![alt text](/img/sidoarjo_tes.PNG)
 ● Untuk mencoba koneksi DNS, lakukan ping domain semerua11.pw dengan melakukan perintah berikut pada client GRESIK dan SIDOARJO
 ```
 ping semerua11.pw
@@ -96,7 +96,7 @@ _**Penyelesaian:**_
 nano /etc/bind/jarkom/semerua11.pw
 ```
 ● Tambahkan konfigurasi seperti pada gambar ke dalam file semerua11.pw.
-![alt text](/img/3 cropped.png)
+![alt text](/img/3_cropped.png)
 ● Restart service bind
 ```
 service bind9 restart
@@ -105,7 +105,7 @@ service bind9 restart
 ```
 ping penanjakan.semerua11.pw
 ```
-![alt text](/img/3 result.PNG)
+![alt text](/img/3_result.PNG)
 #
 #### Soal 4:
 _**Penyelesaian:**_
@@ -166,7 +166,7 @@ service bind9 restart
 service bind9 stop
 ```
 ● ping semerua11.pw
-![alt text](/img/5 result.PNG)
+![alt text](/img/5_result.PNG)
 #
 #### Soal 6 dan 7:
 _**Penyelesaian:**_
@@ -222,14 +222,14 @@ ServerAlias semerua11.pw
 ● Gunakan perintah wget 10.151.36.202/semeru.pw.zip
 ● Unzip file yang telah di download dan ubah namanya menjadi semerua11.pw
 ● Buka browser dan akses http://semerua11.pw
-![alt text](/img/8 result.png)
+![alt text](/img/8_result.png)
 #
 #### Soal 9:
 _**Penyelesaian:**_
 ● Jalankan perintah a2enmod rewrite
 ● Restart apache dengan perintah service apache2 restart
 ● Pindah ke directory /var/www/semerua11.pw dan buat file .htaccess dengan isi file
-![alt text](/img/9 ht.PNG)
+![alt text](/img/9_ht.PNG)
 ● Pindah ke directory /etc/apache2/sites-available kemudian buka file semerua11.pw dan tambahkan
 ```
  <Directory /var/www/semerua11.pw>
@@ -240,8 +240,8 @@ _**Penyelesaian:**_
  ![alt text](/img/9.PNG)
  ● Restart apache dengan perintah service apache2 restart
  ● Buka browser dan akses http://semerua11.pw/home
- ![alt text](/img/9 before.png)
- ![alt text](/img/9 after.png)
+ ![alt text](/img/9_before.png)
+ ![alt text](/img/9_after.png)
 #
 #### Soal 10:
 _**Penyelesaian:**_
@@ -281,10 +281,10 @@ _**Penyelesaian:**_
 ![alt text](/img/11.PNG)
 ● Restart apache dengan perintah service apache2 restart
 ● Hasil :
-![alt text](/img/11 public.png)
-![alt text](/img/11 css.png)
-![alt text](/img/11 js.png)
-![alt text](/img/11 images.png)
+![alt text](/img/11_public.png)
+![alt text](/img/11_css.png)
+![alt text](/img/11_js.png)
+![alt text](/img/11_images.png)
 #
 #### Soal 12:
 _**Penyelesaian:**_
@@ -294,7 +294,7 @@ ErrorDocument 404 /errors/404.html
 ```
 ![alt text](/img/12.PNG)
 ● Hasilnya
-![alt text](/img/12 result.png)
+![alt text](/img/12_result.png)
 #
 #### Soal 13:
 _**Penyelesaian:**_
@@ -304,7 +304,7 @@ Alias /js /var/www/penanjakan.semerua11.pw/public/javascripts
 ```
 ![alt text](/img/13.PNG)
 ● Hasilnya
-![alt text](/img/13 result.png)
+![alt text](/img/13_result.png)
 #
 #### Soal 14:
 _**Penyelesaian:**_
@@ -322,7 +322,7 @@ Copy file default menjadi file naik.gunung.semerua11.pw.
 ● Gunakan perintah wget 10.151.36.202/naik.gunung.semeru.pw.zip
 ● Unzip file yang telah di download di folder naik.gunung.semeru.pw
 ● Hasilnya
-![alt text](/img/14 result.png)
+![alt text](/img/14_result.png)
 #
 #### Soal 15:
 _**Penyelesaian:**_
@@ -340,7 +340,7 @@ htpasswd -c /etc/apache2/.htpasswd semeru
 ![alt text](/img/15c.PNG)
 ● restart apache
 ● hasilnya
-![alt text](/img/15 result.png)
+![alt text](/img/15_result.png)
 #
 #### Soal 16:
 _**Penyelesaian:**_
@@ -348,8 +348,8 @@ _**Penyelesaian:**_
 ![alt text](/img/16.PNG)
 ● restart apache
 ● Buka browser dan akses ke 10.151.73.100 akan auto redirect ke semerua11.pw
-![alt text](/img/16 before.png)
-![alt text](/img/16 after.png)
+![alt text](/img/16_before.png)
+![alt text](/img/16_after.png)
 #
 #### Soal 17:
 _**Penyelesaian:**_
@@ -357,6 +357,6 @@ _**Penyelesaian:**_
 ![alt text](/img/17.PNG)
 ● restart apache
 ● Buka browser dan akses ke penanjakan.semerua11.pw/public/images/tessemeru.jpg akan auto redirect ke  penanjakan.semerua11.pw/public/images/semeru.jpg
-![alt text](/img/17 before.png)
-![alt text](/img/17 after.png)
+![alt text](/img/17_before.png)
+![alt text](/img/17_after.png)
 #
