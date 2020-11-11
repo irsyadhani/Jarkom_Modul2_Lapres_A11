@@ -13,7 +13,7 @@ Kelompok A11:
   * [Soal 5](#soal-5)
   * [Soal 6](#soal-6)
   * [Soal 7](#soal-7)
-* [Web Sever](#web-server)
+* [Web Server](#web-server)
   * [Soal 8](#soal-8)
   * [Soal 9](#soal-9)
   * [Soal 10](#soal-10)
