@@ -190,11 +190,15 @@ Kemudian comment dnssec-validation auto; dan tambahkan baris berikut pada /etc/b
 ```
 allow-query{any;};
 ```
-![alt text](/img/6b.png)
+![alt text](/img/6b.PNG)
+
 ● Kemudian edit file /etc/bind/named.conf.local
 ![alt text](/img/6cc.PNG)
+
 ● Setelah itu restart bind9
+
 ● Pada MOJOKERTO edit file /etc/bind/named.conf.options
+
 ● Kemudian comment dnssec-validation auto; dan tambahkan baris berikut pada /etc/bind/named.conf.options
 ```
 allow-query{any;};
