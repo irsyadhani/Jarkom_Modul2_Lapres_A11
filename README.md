@@ -129,7 +129,7 @@ zone "73.151.10.in-addr.arpa" {
 ```
 cp /etc/bind/db.local /etc/bind/jarkom/73.151.10.in-addr.arpa
 ```
-● Edit file 71.151.10.in-addr.arpa menjadi seperti gambar di bawah ini
+● Edit file 73.151.10.in-addr.arpa menjadi seperti gambar di bawah ini
 ![alt text](/img/4.PNG)
 ● Kemudian restart bind9 dengan perintah
 ```
@@ -159,7 +159,7 @@ service bind9 restart
 zone "semerua11.pw" {
     type slave;
     masters { 10.151.73.98; }; // IP MALANG
-    file "/var/lib/bind/jarkom2020.com";
+    file "/var/lib/bind/semerua11.pw";
 };
 ```
 ![alt text](/img/5b.PNG)
@@ -367,7 +367,7 @@ Copy file default menjadi file naik.gunung.semerua11.pw.
 ● Tambahkan directory listing agar website dapat dilihat
 ![alt text](/img/14c.PNG)
 
-● Tambahkan port 8080 pada file ports.conf
+● Tambahkan port 8888 pada file ports.conf
 ![alt text](/img/14b.PNG)
 
 ● Gunakan perintah a2ensite naik.gunung.semerua11.pw
