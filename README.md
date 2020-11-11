@@ -67,7 +67,7 @@ nano /etc/bind/jarkom/semerua11.pw
 ```
 service bind9 restart
 ```
-● Pada client GRESIK dan SIDOARJO arahkan nameserver menuju IP PROBOLINGGO dengan mengedit file resolv.conf dengan mengetikkan perintah
+● Pada client GRESIK dan SIDOARJO arahkan nameserver menuju IP MALANG dengan mengedit file resolv.conf dengan mengetikkan perintah
  ```
  nano /etc/resolv.conf
  ```
