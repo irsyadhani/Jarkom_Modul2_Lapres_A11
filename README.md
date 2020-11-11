@@ -52,6 +52,7 @@ zone "semerua11.pw" {
 };
 ```
 ● Buat folder jarkom di /etc/bind
+
 ● Copykan file db.local pada path /etc/bind ke dalam folder jarkom yang baru saja dibuat dan ubah namanya menjadi semerua11.pw
 ```
 cp /etc/bind/db.local /etc/bind/jarkom/semerua11.pw
@@ -71,6 +72,7 @@ service bind9 restart
  nano /etc/resolv.conf
  ```
  ![alt text](/img/sidoarjo_tes.PNG)
+ 
 ● Untuk mencoba koneksi DNS, lakukan ping domain semerua11.pw dengan melakukan perintah berikut pada client GRESIK dan SIDOARJO
 ```
 ping semerua11.pw
@@ -79,6 +81,7 @@ ping semerua11.pw
 #
 #### Soal 2:
 _**Penyelesaian:**_
+
 ● Buka file semerua11.pw pada server MALANG dan tambahkan konfigurasi seperti pada gambar berikut:
 ![alt text](/img/2.PNG)
 
@@ -91,6 +94,7 @@ service bind9 restart
 #
 #### Soal 3:
 _**Penyelesaian:**_
+
 ● Edit file /etc/bind/jarkom/semerua11.pw lalu tambahkan subdomain untuk semerua11.pw yang mengarah ke IP PROBOLINGGO
 ```
 nano /etc/bind/jarkom/semerua11.pw
@@ -109,6 +113,7 @@ ping penanjakan.semerua11.pw
 #
 #### Soal 4:
 _**Penyelesaian:**_
+
 ● Edit file /etc/bind/named.conf.local pada MALANG
 ```
 nano /etc/bind/named.conf.local
@@ -133,6 +138,7 @@ service bind9 restart
 #
 #### Soal 5:
 _**Penyelesaian:**_
+
 ● Edit file /etc/bind/named.conf.local dan sesuaikan dengan syntax berikut (SERVER MALANG)
 ```
 zone "semerua11.pw" {
@@ -170,6 +176,7 @@ service bind9 stop
 #
 #### Soal 6 dan 7:
 _**Penyelesaian:**_
+
 ● Pada MALANG, edit file /etc/bind/jarkom/semerua11.pw
 ```
 nano /etc/bind/jarkom/semerua11.pw
@@ -193,22 +200,31 @@ allow-query{any;};
 allow-query{any;};
 ```
 ![alt text](/img/6d.PNG)
+
 ● Lalu edit file /etc/bind/named.conf.local menjadi seperti gambar di bawah:
 ![alt text](/img/6e.PNG)
+
 ● Kemudian buat direktori dengan nama delegasi
+
 ● Copy db.local ke direktori delegasi dan edit namanya menjadi gunung.semerua11.pw
+
 ● Kemudian edit file gunung.semerua11.pw menjadi seperti dibawah ini
 ![alt text](/img/6f.PNG)
+
 ● Restart bind9
+
 ● Testing : Lakukan ping ke domain gunung.semerua11.pw dan naik.gunung.semerua11.pw dari client GRESIK
 ![alt text](/img/7.PNG)
 
 # Web Server
 #### Soal 8:
 _**Penyelesaian:**_
+
 ● Pada PROBOLINGGO, Pindah ke directory /etc/apache2/sites-available
 Copy file default menjadi file semerua11.pw.
+
 ● Buka file semerua11.pw
+
 ● Tambahkan
 ```
 ServerName semerua11.pw
@@ -216,20 +232,31 @@ ServerAlias semerua11.pw
 ```
 ● Ubah DocumentRoot menjadi /var/www/semerua11.pw
 ![alt text](/img/8.PNG)
+
 ● Gunakan perintah a2ensite semerua11.pw
+
 ● Gunakan perintah service apache2 restart
+
 ● Pindah ke directory /var/www 
+
 ● Gunakan perintah wget 10.151.36.202/semeru.pw.zip
+
 ● Unzip file yang telah di download dan ubah namanya menjadi semerua11.pw
+
 ● Buka browser dan akses http://semerua11.pw
+
 ![alt text](/img/8_result.png)
 #
 #### Soal 9:
 _**Penyelesaian:**_
+
 ● Jalankan perintah a2enmod rewrite
+
 ● Restart apache dengan perintah service apache2 restart
+
 ● Pindah ke directory /var/www/semerua11.pw dan buat file .htaccess dengan isi file
 ![alt text](/img/9_ht.PNG)
+
 ● Pindah ke directory /etc/apache2/sites-available kemudian buka file semerua11.pw dan tambahkan
 ```
  <Directory /var/www/semerua11.pw>
@@ -238,31 +265,43 @@ _**Penyelesaian:**_
  </Directory>
  ```
  ![alt text](/img/9.PNG)
- ● Restart apache dengan perintah service apache2 restart
- ● Buka browser dan akses http://semerua11.pw/home
+
+● Restart apache dengan perintah service apache2 restart
+
+● Buka browser dan akses http://semerua11.pw/home
  ![alt text](/img/9_before.png)
  ![alt text](/img/9_after.png)
 #
 #### Soal 10:
 _**Penyelesaian:**_
+
 ● Pada PROBOLINGGO, Pindah ke directory /etc/apache2/sites-available
 Copy file default menjadi file penanjakan.semerua11.pw.
+
 ● Buka file penanjakan.semerua11.pw
+
 ● Tambahkan
 ```
 ServerName penanjakan.semerua11.pw
 ServerAlias penanjakan.semerua11.pw
 ```
+
 ● Ubah DocumentRoot menjadi /var/www/penanjakan.semerua11.pw
 ![alt text](/img/10.PNG)
+
 ● Gunakan perintah a2ensite penanjakan.semerua11.pw
+
 ● Gunakan perintah service apache2 restart
+
 ● Pindah ke directory /var/www 
+
 ● Gunakan perintah wget 10.151.36.202/penanjakan.semeru.pw.zip
+
 ● Unzip file yang telah di download dan ubah namanya menjadi penanjakan.semerua11.pw
 #
 #### Soal 11:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /etc/apache2/sites-available kemudian buka file penanjakan.semerua11.pw dan tambahkan
 ```
  <Directory /var/www/penanjakan.semerua11.pw/public>
@@ -279,7 +318,9 @@ _**Penyelesaian:**_
  </Directory>
 ```
 ![alt text](/img/11.PNG)
+
 ● Restart apache dengan perintah service apache2 restart
+
 ● Hasil :
 ![alt text](/img/11_public.png)
 ![alt text](/img/11_css.png)
@@ -288,74 +329,99 @@ _**Penyelesaian:**_
 #
 #### Soal 12:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /etc/apache2/sites-available kemudian buka file penanjakan.semerua11.pw dan tambahkan
 ```
 ErrorDocument 404 /errors/404.html
 ```
 ![alt text](/img/12.PNG)
+
 ● Hasilnya
 ![alt text](/img/12_result.png)
 #
 #### Soal 13:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /etc/apache2/sites-available kemudian buka file penanjakan.semerua11.pw dan tambahkan
 ```
 Alias /js /var/www/penanjakan.semerua11.pw/public/javascripts
 ```
 ![alt text](/img/13.PNG)
+
 ● Hasilnya
 ![alt text](/img/13_result.png)
 #
 #### Soal 14:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /etc/apache2/sites-available
 Copy file default menjadi file naik.gunung.semerua11.pw.
+
 ● Edit file naik.gunungsemerua11.pw
 ![alt text](/img/14.PNG)
+
 ● Tambahkan directory listing agar website dapat dilihat
 ![alt text](/img/14c.PNG)
+
 ● Tambahkan port 8080 pada file ports.conf
 ![alt text](/img/14b.PNG)
+
 ● Gunakan perintah a2ensite naik.gunung.semerua11.pw
+
 ● Gunakan perintah service apache2 restart
+
 ● Pindah ke directory /var/www 
+
 ● Gunakan perintah wget 10.151.36.202/naik.gunung.semeru.pw.zip
+
 ● Unzip file yang telah di download di folder naik.gunung.semeru.pw
+
 ● Hasilnya
 ![alt text](/img/14_result.png)
 #
 #### Soal 15:
 _**Penyelesaian:**_
+
 ● install apache utilities package
 ```
 apt-get update
 apt-get install apache2 apache2-utils
 ```
+
 ● Buat file password, masukkan username dan password
 ```
 htpasswd -c /etc/apache2/.htpasswd semeru
 ```
 ![alt text](/img/15b.PNG)
+
 ● Edit file /etc/apache2/sites-enabled/naik.gunung.semerua11.pw seperti gambar
 ![alt text](/img/15c.PNG)
+
 ● restart apache
+
 ● hasilnya
 ![alt text](/img/15_result.png)
 #
 #### Soal 16:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /var/www/ dan buat file .htaccess dengan isi file seperti gambar
 ![alt text](/img/16.PNG)
+
 ● restart apache
+
 ● Buka browser dan akses ke 10.151.73.100 akan auto redirect ke semerua11.pw
 ![alt text](/img/16_before.png)
 ![alt text](/img/16_after.png)
 #
 #### Soal 17:
 _**Penyelesaian:**_
+
 ● Pindah ke directory /var/www/penanjakan.semerua11.pw dan buat file .htaccess dengan isi file seperti gambar
 ![alt text](/img/17.PNG)
+
 ● restart apache
+
 ● Buka browser dan akses ke penanjakan.semerua11.pw/public/images/tessemeru.jpg akan auto redirect ke  penanjakan.semerua11.pw/public/images/semeru.jpg
 ![alt text](/img/17_before.png)
 ![alt text](/img/17_after.png)
