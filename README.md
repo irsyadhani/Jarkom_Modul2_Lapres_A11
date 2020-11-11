@@ -39,6 +39,7 @@ dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server P
 
 #### Soal 1:
 _**Penyelesaian:**_
+
 ● Lakukan perintah pada MALANG
 ```
 nano /etc/bind/named.conf.local
@@ -74,7 +75,7 @@ service bind9 restart
 ```
 ping semerua11.pw
 ```
- ![alt text](/img/1 result.PNG)
+ ![alt text](/img/1_result.PNG)
 #
 #### Soal 2:
 _**Penyelesaian:**_
