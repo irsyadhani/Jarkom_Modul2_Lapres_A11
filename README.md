@@ -44,6 +44,7 @@ _**Penyelesaian:**_
 ```
 nano /etc/bind/named.conf.local
 ```
+
 ● Isikan configurasi domain semerua11.pw sesuai dengan syntax berikut:
 ```
 zone "semerua11.pw" {
@@ -57,6 +58,7 @@ zone "semerua11.pw" {
 ```
 cp /etc/bind/db.local /etc/bind/jarkom/semerua11.pw
 ```
+
 ● Kemudian buka file semerua11.pw dan edit seperti gambar berikut dengan IP PROBOLINGGO
 ```
 nano /etc/bind/jarkom/semerua11.pw
@@ -67,6 +69,7 @@ nano /etc/bind/jarkom/semerua11.pw
 ```
 service bind9 restart
 ```
+
 ● Pada client GRESIK dan SIDOARJO arahkan nameserver menuju IP MALANG dengan mengedit file resolv.conf dengan mengetikkan perintah
  ```
  nano /etc/resolv.conf
@@ -89,6 +92,7 @@ _**Penyelesaian:**_
 ```
 service bind9 restart
 ```
+
 ● Lalu cek dengan melakukan ping www.semerua11.pw
 ![alt text](/img/2c.PNG)
 #
@@ -99,12 +103,15 @@ _**Penyelesaian:**_
 ```
 nano /etc/bind/jarkom/semerua11.pw
 ```
+
 ● Tambahkan konfigurasi seperti pada gambar ke dalam file semerua11.pw.
 ![alt text](/img/3_cropped.png)
+
 ● Restart service bind
 ```
 service bind9 restart
 ```
+
 ● Ping ke subdomain dengan perintah berikut dari client GRESIK
 ```
 ping penanjakan.semerua11.pw
@@ -118,6 +125,7 @@ _**Penyelesaian:**_
 ```
 nano /etc/bind/named.conf.local
 ```
+
 ● Lalu tambahkan konfigurasi berikut ke dalam file named.conf.local
 ```
 zone "73.151.10.in-addr.arpa" {
@@ -125,12 +133,15 @@ zone "73.151.10.in-addr.arpa" {
     file "/etc/bind/jarkom/73.151.10.in-addr.arpa";
 };
 ```
+
 ● Copykan file db.local pada path /etc/bind ke dalam folder jarkom yang baru saja dibuat dan ubah namanya menjadi 73.151.10.in-addr.arpa
 ```
 cp /etc/bind/db.local /etc/bind/jarkom/73.151.10.in-addr.arpa
 ```
+
 ● Edit file 73.151.10.in-addr.arpa menjadi seperti gambar di bawah ini
 ![alt text](/img/4.PNG)
+
 ● Kemudian restart bind9 dengan perintah
 ```
 service bind9 restart
@@ -150,10 +161,12 @@ zone "semerua11.pw" {
 };
 ```
 ![alt text](/img/5.PNG)
+
 ● Restart service bind
 ```
 service bind9 restart
 ```
+
 ● Kemudian buka file /etc/bind/named.conf.local pada MOJOKERTO dan tambahkan syntax berikut:
 ```
 zone "semerua11.pw" {
@@ -163,14 +176,17 @@ zone "semerua11.pw" {
 };
 ```
 ![alt text](/img/5b.PNG)
+
 ● Restart service bind
 ```
 service bind9 restart
 ```
+
 ● Pada server MALANG matikan service bind9 (untuk testing)
 ```
 service bind9 stop
 ```
+
 ● ping semerua11.pw
 ![alt text](/img/5_result.PNG)
 #
@@ -182,6 +198,7 @@ _**Penyelesaian:**_
 nano /etc/bind/jarkom/semerua11.pw
 ```
 ![alt text](/img/6.PNG)
+
 ● Kemudian edit file /etc/bind/named.conf.options pada MALANG.
 ```
 nano /etc/bind/named.conf.options
@@ -234,6 +251,7 @@ Copy file default menjadi file semerua11.pw.
 ServerName semerua11.pw
 ServerAlias semerua11.pw
 ```
+
 ● Ubah DocumentRoot menjadi /var/www/semerua11.pw
 ![alt text](/img/8.PNG)
 
@@ -424,7 +442,7 @@ _**Penyelesaian:**_
 ● Pindah ke directory /var/www/penanjakan.semerua11.pw dan buat file .htaccess dengan isi file seperti gambar
 ![alt text](/img/17.jpg)
 
-● restart apache
+- restart apache
 
 ● Buka browser dan akses ke penanjakan.semerua11.pw/public/images/tessemeru.jpg akan auto redirect ke  penanjakan.semerua11.pw/public/images/semeru.jpg
 ![alt text](/img/17_before.png)
