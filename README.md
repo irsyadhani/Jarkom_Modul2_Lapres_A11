@@ -140,12 +140,18 @@ cp /etc/bind/db.local /etc/bind/jarkom/73.151.10.in-addr.arpa
 ```
 
 ● Edit file 73.151.10.in-addr.arpa menjadi seperti gambar di bawah ini
-![alt text](/img/4.PNG)
+
+![alt text](/img/4_cara.jpg)
 
 ● Kemudian restart bind9 dengan perintah
 ```
 service bind9 restart
 ```
+- Kemudian jalankan UML Gresik dengan command
+```
+host -t PTR 10.151.73.100
+```
+![alt text](/img/4_jawab.jpg)
 #
 #### Soal 5:
 _**Penyelesaian:**_
