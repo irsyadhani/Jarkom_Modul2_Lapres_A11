@@ -105,7 +105,7 @@ nano /etc/bind/jarkom/semerua11.pw
 ```
 
 ● Tambahkan konfigurasi seperti pada gambar ke dalam file semerua11.pw.
-![alt text](/img/3_cropped.png)
+![alt text](/img/3.png)
 
 ● Restart service bind
 ```
